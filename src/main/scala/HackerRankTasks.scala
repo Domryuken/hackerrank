@@ -25,8 +25,11 @@ object HackerRankTasks extends App{
   def filterPositionInAList(arr:List[Int]):List[Int] = (for(i <- 1 until arr.length by 2)yield arr(i)).toList
   def filterPositionInAList2(arr:List[Int]):List[Int] = arr.drop(1).sliding(1,2).toList.flatten
 
+  def arrayOfNElements(num:Int) : List[Int] = (0 until num).toList
 
-//  println(f(List(1,2,3,4,5,6,7,8,9)))
+  def reverseAListWithoutReverse(arr:List[Int]):List[Int] = (for(i <- arr.length-1 to 0 by -1) yield arr(i)).toList
+
+  def sumOfOddElements(arr:List[Int]):Int = arr.filter(e => (e%2!=0)).sum
 
 
 }
